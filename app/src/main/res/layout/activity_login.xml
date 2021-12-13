@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/cherry_cream_soda"
         android:text="Gamb"
-        android:textColor="#FFFFFF"
+        android:textColor="#FDBC19"
         android:textSize="40sp" />
 
     <EditText
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/background_texto"
+        android:background="@drawable/background_botao"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="6dp"
         android:ems="10"
@@ -33,8 +33,8 @@
         android:hint="Email"
         android:inputType="textWebEmailAddress|textPersonName"
         android:padding="10dp"
-        android:textColor="#FDF8F8"
-        android:textColorHint="#F6F0F2" />
+        android:textColor="#FDBC19"
+        android:textColorHint="#FDBC19" />
 
     <EditText
         android:id="@+id/editTextSenhaLogin"
@@ -49,8 +49,8 @@
         android:hint="Senha"
         android:inputType="textPersonName|textPassword"
         android:padding="10dp"
-        android:textColor="#FDF8F8"
-        android:textColorHint="#F6F0F2" />
+        android:textColor="#FDBC19"
+        android:textColorHint="#FDBC19" />
 
     <Button
         android:id="@+id/buttonAcessar"
@@ -59,7 +59,7 @@
         android:background="@drawable/background_botao"
         android:fontFamily="sans-serif-black"
         android:text="Login"
-        android:textColor="#00BCD4"
+        android:textColor="#FDBC19"
         android:textSize="16dp" />
 
     <Button
@@ -70,7 +70,7 @@
         android:background="@drawable/background_button_cadastre"
         android:fontFamily="sans-serif-black"
         android:text="Cadastre-se"
-        android:textColor="#FDF8F8"
+        android:textColor="#FDBC19"
         android:textSize="16sp" />
 
 </LinearLayout>
