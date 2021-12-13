@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "84116919968",
+    "project_id": "gamb-cb17c",
+    "storage_bucket": "gamb-cb17c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84116919968:android:ccc71dbeaa246235a4dbc5",
+        "android_client_info": {
+          "package_name": "br.com.filnat.finalworkn2androidstudio.activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84116919968-ts8hv87sn2er071nrc4rul66931o91rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8tOaFmldR2tqVzmZpQcMwiI7o0Cu4mZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84116919968-ts8hv87sn2er071nrc4rul66931o91rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
