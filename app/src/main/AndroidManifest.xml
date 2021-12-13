@@ -13,6 +13,9 @@
             android:name=".activity.LoginActivity"
             android:exported="true" />
         <activity
+            android:name=".activity.FuncoesActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.CadastroActivity"
             android:exported="true">
             <intent-filter>
