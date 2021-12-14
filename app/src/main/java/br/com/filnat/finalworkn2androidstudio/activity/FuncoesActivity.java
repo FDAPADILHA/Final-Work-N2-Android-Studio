@@ -34,6 +34,7 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
     private ActivityManager activityManager;
     private ComponentName compName;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +63,7 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         buttonPower.setOnClickListener(this);
         buttonPowerOn.setOnClickListener(this);
         buttonPowerOff.setOnClickListener(this);
+
     }
 
     @Override
@@ -80,14 +82,14 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
             if (active) {
                 devicePolicyManager.lockNow();
             } else {
-                Toast.makeText(this, "Você precisa de permissão para executar essa função!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You need permission to perform this function!", Toast.LENGTH_SHORT).show();
             }
 
         } else if (view == buttonPowerOn) {
 
             Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
             intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, compName);
-            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "Por que você precisa de permissão?");
+            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "why do you need permission?");
             startActivityIfNeeded(intent, RESULT_ENABLE);
                 /*startActivityForResult*/
         } else if (view == buttonPowerOff) {
@@ -103,9 +105,9 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         switch(requestCode) {
             case RESULT_ENABLE:
                     if(resultCode == Activity.RESULT_OK){
-                        Toast.makeText(FuncoesActivity.this, "Você precisa de permissão para executar essa função!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(FuncoesActivity.this, "You need permission to perform this function!",Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(FuncoesActivity.this, "Problema para configurar a permissão!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(FuncoesActivity.this, "Problem configuring permission!",Toast.LENGTH_LONG).show();
                     }
                 break;
         }
@@ -120,7 +122,7 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         CharSequence format = DateFormat.getDateInstance().format("yyyy-MM-dd");
 
         try {
-            String dirPath = Environment.getExternalStorageDirectory().toString() + "/Captura de Tela";
+            String dirPath = Environment.getExternalStorageDirectory().toString() + "/Print Screen";
             File fileDir = new File(dirPath);
             if (!fileDir.exists()) {
                 boolean mkdir = fileDir.mkdir();

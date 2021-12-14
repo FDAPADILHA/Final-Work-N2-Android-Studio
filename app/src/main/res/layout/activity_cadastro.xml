@@ -32,7 +32,8 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textColor="#FDBC19"
-        android:textColorHint="#FDBC19" />
+        android:textColorHint="#FDBC19"
+        android:text="@string/name"/>
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -48,7 +49,8 @@
         android:inputType="textWebEmailAddress|textPersonName"
         android:padding="10dp"
         android:textColor="#FDBC19"
-        android:textColorHint="#FDBC19" />
+        android:textColorHint="#FDBC19"
+        android:text="@string/email"/>
 
     <EditText
         android:id="@+id/editTextSenha"
@@ -64,7 +66,8 @@
         android:inputType="textPersonName|textPassword"
         android:padding="10dp"
         android:textColor="#FDBC19"
-        android:textColorHint="#FDBC19" />
+        android:textColorHint="#FDBC19"
+        android:text="@string/senha"/>
 
     <Button
         android:id="@+id/buttonCadastrar"
@@ -72,7 +75,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/background_botao"
         android:fontFamily="sans-serif-black"
-        android:text="Cadastrar"
+        android:text="@string/cad"
         android:textColor="#FDBC19"
         android:textSize="16sp" />
 </LinearLayout>

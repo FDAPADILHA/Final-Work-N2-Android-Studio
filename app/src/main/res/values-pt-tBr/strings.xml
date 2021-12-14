@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Gamb</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="cad">Cadastro</string>
+    <string name="senha">Senha</string>
+    <string name="login">Entrar</string>
+</resources>
