@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import br.com.filnat.finalworkn2androidstudio.R;
 
@@ -22,9 +23,11 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonCadastre;
     private Button buttonAcessar;
     private EditText editTextLogin, editTextSenhaLogin;
+
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authStateListener;
-
+    private FirebaseUser usuario;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +36,20 @@ public class LoginActivity extends AppCompatActivity {
         initView();
         setButtonCadastre();
         setButtonAcessar();
+        
         auth = FirebaseAuth.getInstance();
 
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if( usuario != null){
+                    Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                    startActivity(intent);
+                }
+            }
+        };
+
+        auth.addAuthStateListener(authStateListener);
     }
 
     public void initView() {
@@ -76,16 +91,18 @@ public class LoginActivity extends AppCompatActivity {
             if(email.isEmpty() || senha.isEmpty()){
                 Toast.makeText(this, "Todos os campos devem ser preenchidos!", Toast.LENGTH_LONG).show();
             } else {
-                auth.createUserWithEmailAndPassword(email, senha)
+                auth.signInWithEmailAndPassword(email, senha)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(!task.isSuccessful()){
-                                    Toast.makeText(LoginActivity.this, "Não possível criar o usuário!", Toast.LENGTH_LONG).show();
+                                if(task.isSuccessful()){
+                                    usuario = auth.getCurrentUser();
+                                }else{
+                                    task.getException().toString();
+                                    Toast.makeText(LoginActivity.this, "Erro no email ou senha. Tente novamente!", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
-
             }
 
     }
