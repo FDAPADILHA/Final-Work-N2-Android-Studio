@@ -1,6 +1,7 @@
 package br.com.filnat.finalworkn2androidstudio.activity;
 
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.filnat.finalworkn2androidstudio.R;
 
@@ -59,8 +61,35 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
             if (active) {
                 devicePolicyManager.lockNow();
             } else {
-                Toast.makeText(this, "You need to enable the Admin Device Features", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Você precisa de permissão para executar essa função!", Toast.LENGTH_SHORT).show();
             }
 
+        } else if (view == buttonPowerOn) {
+
+            Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, compName);
+            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "Por que você precisa de permissão?");
+            startActivityIfNeeded(intent, RESULT_ENABLE);
+                /*startActivityForResult*/
+        } else if (view == buttonPowerOff) {
+            devicePolicyManager.removeActiveAdmin(compName);
+            buttonPowerOff.setVisibility(View.GONE);
+            buttonPowerOn.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        switch(requestCode) {
+            case RESULT_ENABLE:
+                    if(resultCode == Activity.RESULT_OK){
+                        Toast.makeText(FuncoesActivity.this, "Você precisa de permissão para executar essa função!",Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(FuncoesActivity.this, "Problema para configurar a permissão!",Toast.LENGTH_LONG).show();
+                    }
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
