@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.FirebaseApp;
+
 import br.com.filnat.finalworkn2androidstudio.R;
 
 public class FuncoesActivity extends AppCompatActivity implements View.OnClickListener {
@@ -29,7 +32,7 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         devicePolicyManager = (DevicePolicyManager) getSystemService(DEVICE_POLICY_SERVICE);
         activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         compName = new ComponentName(this, AdminPower.class);
-
+        FirebaseApp.initializeApp(FuncoesActivity.this);
         initView();
 
     }

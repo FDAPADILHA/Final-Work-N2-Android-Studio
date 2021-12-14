@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/new_background"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
@@ -10,14 +11,11 @@
     android:paddingRight="32dp"
     tools:context=".activity.CadastroActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cherry_cream_soda"
-        android:text="Gamb"
-        android:textColor="#FDBC19"
-        android:textSize="40sp" />
+    <ImageView
+        android:id="@+id/Logo2"
+        android:layout_width="445dp"
+        android:layout_height="172dp"
+        app:srcCompat="@mipmap/logo" />
 
     <EditText
         android:id="@+id/editTextNome"
