@@ -16,9 +16,6 @@
         android:theme="@style/Theme.FinalWorkN2AndroidStudio">
 
         <activity
-            android:name=".activity.ScreenShot"
-            android:exported="true" />
-        <activity
             android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -38,18 +35,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-<<<<<<< HEAD
+
         <receiver
             android:name=".activity.AdminPower"
             android:exported="true"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
-=======
-        <receiver android:name=".activity.AdminPower" android:permission="android.permission.BIND_DEVICE_ADMIN" android:exported="false"
-            tools:ignore="MissingClass">
-            <meta-data android:name="android.app.device_admin"
->>>>>>> bd868dd1e8bc9ac4fcefcee98080c776a15135be
+
                 android:resource="@xml/politicas" />
 
             <intent-filter>

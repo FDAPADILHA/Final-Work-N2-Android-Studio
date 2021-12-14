@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if( usuario != null){
+                if(usuario != null){
                     Intent intent = new Intent(LoginActivity.this, FuncoesActivity.class);
                     startActivity(intent);
                 }
