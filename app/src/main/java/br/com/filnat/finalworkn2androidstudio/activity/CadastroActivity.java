@@ -49,6 +49,7 @@ public class CadastroActivity extends AppCompatActivity {
         };
     }
 
+
     private void initView() {
         editTextNome = findViewById(R.id.editTextNome);
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -57,22 +58,17 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
-    public void setButtonCadastrar() {
 
+    private void setButtonCadastrar() {
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cadastrar();
-                Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
-                startActivity(intent);
-<<<<<<< HEAD
-                cadastrar();
-
-=======
->>>>>>> e360c9fa5ce1055e5085d4482a5efb474f2dff7d
             }
         });
     }
+
+
 
     private void cadastrar(){
         String nome = editTextNome.getText().toString();

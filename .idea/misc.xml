@@ -3,21 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/drawable/new_background.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/layout/activity_funcoes.xml" value="0.1962962962962963" />
-      </map>
-    </option>
-  </component>
-=======
-        <entry key="..\:/Users/XPS/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/font/.xml" value="0.24791666666666667" />
-        <entry key="..\:/Users/XPS/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/layout/activity_cadastro.xml" value="0.21770833333333334" />
-        <entry key="..\:/Users/XPS/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/layout/activity_funcoes.xml" value="0.33" />
-        <entry key="..\:/Users/XPS/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Firebase/Final-Work-N2-Android-Studio/app/src/main/res/layout/activity_screen_shot.xml" value="0.18541666666666667" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
->>>>>>> e360c9fa5ce1055e5085d4482a5efb474f2dff7d
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
