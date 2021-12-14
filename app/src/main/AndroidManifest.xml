@@ -10,22 +10,22 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalWorkN2AndroidStudio">
+
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.FuncoesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.CadastroActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.FuncoesActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.CadastroActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

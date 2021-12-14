@@ -20,9 +20,9 @@ import br.com.filnat.finalworkn2androidstudio.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private EditText editTextLogin, editTextSenhaLogin;
     private Button buttonCadastre;
     private Button buttonAcessar;
-    private EditText editTextLogin, editTextSenhaLogin;
 
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -32,24 +32,22 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initView();
-        setButtonCadastre();
-        setButtonAcessar();
-        
+
         auth = FirebaseAuth.getInstance();
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if( usuario != null){
-                    Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, FuncoesActivity.class);
                     startActivity(intent);
                 }
             }
         };
 
-        auth.addAuthStateListener(authStateListener);
+        setButtonCadastre();
+        setButtonAcessar();
     }
 
     public void initView() {
@@ -68,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
                 startActivity(intent);
-
             }
         });
     }
@@ -79,9 +76,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Logar();
-                Intent intent = new Intent(LoginActivity.this, FuncoesActivity.class);
-                startActivity(intent);
-
             }
         });
     }
@@ -89,10 +83,11 @@ public class LoginActivity extends AppCompatActivity {
     private void Logar() {
         String email = editTextLogin.getText().toString();
         String senha = editTextSenhaLogin.getText().toString();
+
             if(email.isEmpty() || senha.isEmpty()){
                 Toast.makeText(this, "Todos os campos devem ser preenchidos!", Toast.LENGTH_LONG).show();
             } else {
-                auth.signInWithEmailAndPassword(email, senha)
+                auth.createUserWithEmailAndPassword(email, senha)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
