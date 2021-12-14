@@ -10,5 +10,32 @@
     android:paddingRight="32dp"
     tools:context=".activity.FuncoesActivity">
 
+    <Button
+        android:id="@+id/buttonPower"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Lock the Phone"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonPowerOn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Enable"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonPower"/>
+
+    <Button
+        android:id="@+id/buttonPowerOff"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Disable"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonPowerOn"/>
+
+
 
 </LinearLayout>

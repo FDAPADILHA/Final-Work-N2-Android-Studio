@@ -44,4 +44,8 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
+    private void cadastrar(){
+
+    }
+
 }
