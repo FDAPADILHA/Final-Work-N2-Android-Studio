@@ -7,15 +7,9 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< HEAD
-import android.view.Menu;
-=======
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
->>>>>>> e360c9fa5ce1055e5085d4482a5efb474f2dff7d
-
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.filnat.finalworkn2androidstudio.R;
@@ -82,9 +76,6 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-<<<<<<< HEAD
-    
-=======
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
@@ -99,5 +90,5 @@ public class FuncoesActivity extends AppCompatActivity implements View.OnClickLi
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
->>>>>>> e360c9fa5ce1055e5085d4482a5efb474f2dff7d
+
 }

@@ -1,25 +1,14 @@
 package br.com.filnat.finalworkn2androidstudio.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.os.PersistableBundle;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
-import br.com.filnat.finalworkn2androidstudio.R;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastroActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
     private Button buttonCadastrar;
     private EditText editTextNome, editTextEmail, editTextSenha;
 
@@ -92,5 +81,7 @@ public class CadastroActivity extends AppCompatActivity {
                     });
         }
     }
+=======
+>>>>>>> bd868dd1e8bc9ac4fcefcee98080c776a15135be
 
 }

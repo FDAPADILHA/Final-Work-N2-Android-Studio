@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.com.filnat.finalworkn2androidstudio">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -13,35 +14,42 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalWorkN2AndroidStudio">
+
         <activity
             android:name=".activity.ScreenShot"
             android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.FuncoesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.CadastroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.FuncoesActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.CadastroActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+<<<<<<< HEAD
         <receiver
             android:name=".activity.AdminPower"
             android:exported="true"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
+=======
+        <receiver android:name=".activity.AdminPower" android:permission="android.permission.BIND_DEVICE_ADMIN" android:exported="false"
+            tools:ignore="MissingClass">
+            <meta-data android:name="android.app.device_admin"
+>>>>>>> bd868dd1e8bc9ac4fcefcee98080c776a15135be
                 android:resource="@xml/politicas" />
 
             <intent-filter>
