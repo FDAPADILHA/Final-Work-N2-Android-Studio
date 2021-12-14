@@ -78,9 +78,10 @@ public class LoginActivity extends AppCompatActivity {
         buttonAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Logar();
                 Intent intent = new Intent(LoginActivity.this, FuncoesActivity.class);
                 startActivity(intent);
-                Logar();
+
             }
         });
     }

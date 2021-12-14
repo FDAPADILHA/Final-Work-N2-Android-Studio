@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,8 +20,7 @@ import br.com.filnat.finalworkn2androidstudio.R;
 public class CadastroActivity extends AppCompatActivity {
 
     private Button buttonCadastrar;
-    private EditText editTextNome, editTextEmail, editTextSenha;
-
+    private EditText editTextEmail, editTextSenha;
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseUser usuario;
@@ -33,49 +31,43 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         initView();
-        setButtonCadastrar();
-
+        //setButtonCadastrar();
         auth = FirebaseAuth.getInstance();
-
         authStateListener = new FirebaseAuth.AuthStateListener() {
+
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 usuario = auth.getCurrentUser();
                 if(usuario != null){
+                    cadastrar();
                     Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
             }
         };
+        auth = FirebaseAuth.getInstance();
     }
 
     private void initView() {
-        editTextNome = findViewById(R.id.editTextNome);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSenha = findViewById(R.id.editTextSenha);
         buttonCadastrar = findViewById(R.id.buttonCadastrar);
 
     }
 
-    public void setButtonCadastrar() {
-
+    /*public void setButtonCadastrar() {
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cadastrar();
                 Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-                cadastrar();
 
-=======
->>>>>>> e360c9fa5ce1055e5085d4482a5efb474f2dff7d
             }
         });
-    }
+    }*/
 
     private void cadastrar(){
-        String nome = editTextNome.getText().toString();
         String email = editTextEmail.getText().toString();
         String senha = editTextSenha.getText().toString();
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.com.filnat.finalworkn2androidstudio">
 
     <application
@@ -30,8 +31,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <receiver android:name=".activity.AdminPower" android:permission="android.permission.BIND_DEVICE_ADMIN"
-            android:exported="true">
+        <receiver android:name=".activity.AdminPower" android:permission="android.permission.BIND_DEVICE_ADMIN" android:exported="false"
+            tools:ignore="MissingClass">
             <meta-data android:name="android.app.device_admin"
                 android:resource="@xml/politicas" />
 
